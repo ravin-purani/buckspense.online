@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Gradient for the main icon body -->
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    
+    <!-- Soft shadow glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background decorative element -->
+  <rect x="15" y="15" width="70" height="70" rx="20" fill="#0d1324" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+
+  <!-- Logo Graphics: Minimalist, futuristic visual concept representing finance growth and the letter B -->
+  <g filter="url(#glow)">
+    <!-- Upward trend arrow integrated into a sleek structure -->
+    <path d="M35 70V30C35 27.2386 37.2386 25 40 25H55C63.2843 25 70 31.7157 70 40C70 45.4746 67.0658 50.2635 62.668 52.8524C67.0658 55.4412 70 60.2301 70 65.7047C70 73.989 63.2843 80.7047 55 80.7047H40C37.2386 80.7047 35 78.4661 35 75.7047V70Z" 
+          fill="none" 
+          stroke="url(#logo-grad)" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Central tracking line signifying split/expense tracking -->
+    <path d="M35 52.8524H52.5" 
+          stroke="url(#logo-grad)" 
+          stroke-width="7" 
+          stroke-linecap="round"/>
+          
+    <!-- Decorative growth dot -->
+    <circle cx="52.5" cy="52.8524" r="5" fill="#06b6d4"/>
+  </g>
+</svg>

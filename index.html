@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buckspense - Premium Personal Budgeting & Expense Tracking</title>
+  <meta name="description" content="Take control of your cashflow and grow your wealth effortlessly with Buckspense. The modern, elegant expense tracker built for high-performance financial management.">
+  
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content="Buckspense - Premium Personal Finance Dashboard">
+  <meta property="og:description" content="Take control of your cashflow and grow your wealth effortlessly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://buckspense.online/">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+  <!-- Site Sticky Header -->
+  <header class="site-header" id="main-header">
+    <div class="container">
+      <a href="index.html" class="logo-link" id="header-logo-link">
+        <img src="assets/images/logo.svg" alt="Buckspense Logo" class="logo-icon" id="header-logo-img">
+        <span>buck<span class="gradient-accent-text">spense</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="site-nav" id="navigation-drawer">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="privacy.html" class="nav-link" id="nav-privacy">Privacy Policy</a></li>
+        </ul>
+        <a href="#cta" class="btn btn-primary" id="header-cta-btn">Launch App</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" id="mobile-menu-trigger">
+        &#9776;
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home-hero">
+    <div class="container">
+      <div class="hero-badge" id="hero-live-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Now in Public Beta</span>
+      </div>
+      
+      <h1 class="gradient-text" id="hero-main-title">
+        Take Control of Your Cashflow, Effortlessly
+      </h1>
+      
+      <p class="hero-subtitle" id="hero-lead-text">
+        Buckspense brings crystal clarity to your personal finance. Monitor expenses, design active budgets, and build your net worth within a beautiful, secure dashboard.
+      </p>
+      
+      <div class="hero-actions" id="hero-button-group">
+        <a href="#cta" class="btn btn-primary" id="hero-primary-btn">Get Started Free</a>
+        <a href="#features" class="btn btn-secondary" id="hero-secondary-btn">Explore Features</a>
+      </div>
+
+      <!-- Majestic Interactive Mockup Showcase -->
+      <div class="dashboard-showcase" id="dashboard-mockup">
+        <div class="mockup-header">
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+        </div>
+        <div class="mockup-content">
+          <div class="mockup-main">
+            <div class="mockup-stats">
+              <div class="mockup-card">
+                <span style="color: var(--text-muted); font-size: 0.85rem;">Total Balance</span>
+                <div class="mockup-val gradient-accent-text">$12,480.50</div>
+              </div>
+              <div class="mockup-card">
+                <span style="color: var(--text-muted); font-size: 0.85rem;">Monthly Expenses</span>
+                <div class="mockup-val" style="color: #f87171;">$2,142.20</div>
+              </div>
+            </div>
+            
+            <!-- CSS Chart Visualizer -->
+            <div class="mockup-chart" id="chart-bars-container">
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+              <div class="chart-bar" style="height: 10%;"></div>
+            </div>
+          </div>
+          
+          <div class="mockup-side">
+            <div class="mockup-card" style="height: 100%;">
+              <span style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 1rem;">Recent Transactions</span>
+              <div class="tx-list">
+                <div class="tx-item">
+                  <div>
+                    <div style="font-size: 0.85rem; font-weight: 500;">SaaS Subscription</div>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Cloud Service</span>
+                  </div>
+                  <span style="font-size: 0.85rem; font-weight: 600; color: #f87171;">-$14.99</span>
+                </div>
+                <div class="tx-item">
+                  <div>
+                    <div style="font-size: 0.85rem; font-weight: 500;">Consulting Payout</div>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Freelance Income</span>
+                  </div>
+                  <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-emerald);">+$850.00</span>
+                </div>
+                <div class="tx-item">
+                  <div>
+                    <div style="font-size: 0.85rem; font-weight: 500;">Grocery Mart</div>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Daily Living</span>
+                  </div>
+                  <span style="font-size: 0.85rem; font-weight: 600; color: #f87171;">-$84.30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header" id="features-header">
+        <h2 class="gradient-text">Designed to Grow Your Wealth</h2>
+        <p>Simple tools backed by solid intelligence. Everything you need to optimize your cash flow, all in a unified high-performance layout.</p>
+      </div>
+      
+      <div class="grid-3" id="features-grid">
+        <!-- Feature Card 1 -->
+        <div class="feature-card" id="feature-1">
+          <div class="feature-icon-wrapper">
+            <!-- SVG Icon: Wallet/Budget -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V12"/><path d="M16 14h.01"/></svg>
+          </div>
+          <h3>Smart Budgeting</h3>
+          <p>Create tailored category allocations. Receive friendly alerts when you near thresholds, ensuring you always stay green.</p>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="feature-card" id="feature-2">
+          <div class="feature-icon-wrapper">
+            <!-- SVG Icon: Trend Chart -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3>Instant Analytics</h3>
+          <p>Deep-dive visualizations into your buying habits. Automatically label streams of expenses with intelligent automated sorting.</p>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="feature-card" id="feature-3">
+          <div class="feature-icon-wrapper">
+            <!-- SVG Icon: Lock Shield -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Secure &amp; Encrypted</h3>
+          <p>Your financial transaction data remains completely secure. We utilize banking-grade AES-256 standard encryption keys.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Registration Section -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box" id="cta-enrollment-card">
+        <h2 class="gradient-text">Secure Your Free Account Today</h2>
+        <p>Enter your email to receive early developer access, beta invites, and product updates right in your inbox.</p>
+        
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Buckspense updates!');" id="cta-form">
+          <input type="email" placeholder="name@company.com" class="newsletter-input" required id="cta-email-input">
+          <button type="submit" class="btn btn-primary" id="cta-submit-btn">Notify Me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" id="footer-logo-link">
+            <img src="assets/images/logo.svg" alt="Buckspense Logo" class="logo-icon" id="footer-logo-img">
+            <span>buck<span class="gradient-accent-text">spense</span></span>
+          </a>
+          <p class="footer-desc">
+            Premium personal finance and budgeting tailored to the modern professional. Streamlined, encrypted, and designed for growth.
+          </p>
+        </div>
+        
+        <!-- Link Directory -->
+        <div>
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link">Features</a></li>
+            <li><a href="#cta" class="footer-link">Beta Program</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link" id="footer-privacy-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@buckspense.online" class="footer-link">support@buckspense.online</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Copyright Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> buckspense.online. All rights reserved.</p>
+        <p style="color: var(--text-muted);">Secure SSL Encrypted Platform</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Loader -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
