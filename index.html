@@ -197,25 +197,30 @@
         
         <!-- Interactive Feedback Form -->
         <form class="feedback-form" id="feedback-form">
+          <!-- Web3Forms Integration configuration -->
+          <input type="hidden" name="access_key" value="cfc8e1b9-d78e-4fc5-8a38-0e4d3418de66">
+          <input type="hidden" name="from_name" value="Buckspense Support Portal">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
           <div class="form-grid">
             <div class="form-group">
               <label for="feedback-name" class="form-label">Your Name</label>
-              <input type="text" id="feedback-name" placeholder="John Doe" class="form-control" required>
+              <input type="text" id="feedback-name" name="name" placeholder="John Doe" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="feedback-email" class="form-label">Email Address</label>
-              <input type="email" id="feedback-email" placeholder="john@example.com" class="form-control" required>
+              <input type="email" id="feedback-email" name="email" placeholder="john@example.com" class="form-control" required>
             </div>
           </div>
           
           <div class="form-group">
             <label for="feedback-subject" class="form-label">Subject</label>
-            <input type="text" id="feedback-subject" placeholder="Feature suggestion / Bug report" class="form-control" required>
+            <input type="text" id="feedback-subject" name="subject" placeholder="Feature suggestion / Bug report" class="form-control" required>
           </div>
 
           <div class="form-group">
             <label for="feedback-message" class="form-label">Message</label>
-            <textarea id="feedback-message" placeholder="Type your suggestion, review, or question here..." class="form-control form-textarea" required></textarea>
+            <textarea id="feedback-message" name="message" placeholder="Type your suggestion, review, or question here..." class="form-control form-textarea" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" style="align-self: flex-start; min-width: 160px;" id="feedback-submit-btn">Send Message</button>

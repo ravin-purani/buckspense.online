@@ -111,34 +111,49 @@ function setupCopyrightYear() {
 function setupFeedbackForm() {
   const form = document.getElementById('feedback-form');
   const successOverlay = document.getElementById('success-overlay');
+  const submitBtn = document.getElementById('feedback-submit-btn');
   
-  if (!form || !successOverlay) return;
+  if (!form || !successOverlay || !submitBtn) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent standard page redirect
 
-    // Collect inputs
-    const name = document.getElementById('feedback-name').value;
-    const email = document.getElementById('feedback-email').value;
-    const subject = document.getElementById('feedback-subject').value;
-    const message = document.getElementById('feedback-message').value;
+    // Set interactive loading state on button
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
-    // Simulate enquiry handling payload
-    console.log('--- Feedback Received ---');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Subject:', subject);
-    console.log('Message:', message);
-    console.log('Support destination: buckspense@gmail.com');
-    console.log('-------------------------');
+    const formData = new FormData(form);
 
-    // Show success overlay card
-    successOverlay.classList.add('show');
+    // Send HTTP POST request to Web3Forms API
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(async (response) => {
+      const resJson = await response.json();
+      if (response.status === 200 && resJson.success) {
+        // Success: Trigger visual popup overlay
+        successOverlay.classList.add('show');
+        form.reset();
 
-    // Automatically dismiss success window after 5 seconds and reset form
-    setTimeout(() => {
-      successOverlay.classList.remove('show');
-      form.reset();
-    }, 5000);
+        // Stagger dismiss timer for 5 seconds
+        setTimeout(() => {
+          successOverlay.classList.remove('show');
+        }, 5000);
+      } else {
+        console.error('Web3Forms Server Error:', resJson);
+        alert('Oops! ' + (resJson.message || 'Error occurred while sending message. Please try again.'));
+      }
+    })
+    .catch((error) => {
+      console.error('Network Dispatch Error:', error);
+      alert('Network error occurred. Please check your connection and try again.');
+    })
+    .finally(() => {
+      // Restore button text and disabled status
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    });
   });
 }
