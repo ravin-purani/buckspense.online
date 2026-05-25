@@ -600,36 +600,158 @@ a {
   margin: 0 auto 2.5rem;
 }
 
-.newsletter-form {
-  display: flex;
-  max-width: 480px;
+/* Feedback & Enquiries Form */
+.feedback-form {
+  max-width: 600px;
   margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.form-control {
   background: var(--bg-primary);
-  padding: 6px;
-  border-radius: var(--border-radius-sm);
   border: 1px solid var(--border-glass);
-  transition: var(--transition-fast);
-}
-
-.newsletter-form:focus-within {
-  border-color: var(--accent-cyan);
-  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.15);
-}
-
-.newsletter-input {
-  flex: 1;
-  background: none;
-  border: none;
+  border-radius: var(--border-radius-sm);
   color: var(--text-primary);
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   font-family: var(--font-body);
   font-size: 0.95rem;
   outline: none;
+  transition: var(--transition-fast);
 }
 
-.newsletter-input::placeholder {
+.form-control:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+}
+
+.form-control::placeholder {
   color: var(--text-muted);
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Success Overlay card */
+.form-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  border-radius: var(--border-radius-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  z-index: 10;
+  padding: 2rem;
+  border: 1px solid var(--border-active);
+}
+
+.form-success-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.success-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--glow-emerald);
+}
+
+/* Premium Google Play Store Download Button */
+.btn-playstore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  text-align: left;
+}
+
+.btn-playstore:hover {
+  border-color: var(--accent-cyan);
+  background: #090e1a;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-cyan);
+}
+
+.playstore-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.playstore-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.playstore-sub {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.playstore-main {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 /* Footer Section */

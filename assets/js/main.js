@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupActiveNavigation();
   animateDashboardMockup();
   setupCopyrightYear();
+  setupFeedbackForm();
 });
 
 /**
@@ -102,4 +103,42 @@ function setupCopyrightYear() {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+}
+
+/**
+ * Handle Feedback & Enquiry Form Submission
+ */
+function setupFeedbackForm() {
+  const form = document.getElementById('feedback-form');
+  const successOverlay = document.getElementById('success-overlay');
+  
+  if (!form || !successOverlay) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent standard page redirect
+
+    // Collect inputs
+    const name = document.getElementById('feedback-name').value;
+    const email = document.getElementById('feedback-email').value;
+    const subject = document.getElementById('feedback-subject').value;
+    const message = document.getElementById('feedback-message').value;
+
+    // Simulate enquiry handling payload
+    console.log('--- Feedback Received ---');
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Subject:', subject);
+    console.log('Message:', message);
+    console.log('Support destination: buckspense@gmail.com');
+    console.log('-------------------------');
+
+    // Show success overlay card
+    successOverlay.classList.add('show');
+
+    // Automatically dismiss success window after 5 seconds and reset form
+    setTimeout(() => {
+      successOverlay.classList.remove('show');
+      form.reset();
+    }, 5000);
+  });
 }

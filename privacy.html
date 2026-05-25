@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Buckspense</title>
-  <meta name="description" content="Read the Buckspense Privacy Policy to understand how we protect your personal and financial transaction data. Built with banking-grade security first.">
+  <meta name="description" content="Read the Buckspense Privacy Policy. Built from the ground up as a 100% offline-first expense manager, we collect zero personal financial data.">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -28,7 +28,7 @@
           <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
           <li><a href="privacy.html" class="nav-link active" id="nav-privacy">Privacy Policy</a></li>
         </ul>
-        <a href="index.html#cta" class="btn btn-primary" id="header-cta-btn">Launch App</a>
+        <a href="index.html#contact-us" class="btn btn-primary" id="header-cta-btn">Support Desk</a>
       </nav>
 
       <!-- Mobile Hamburger Toggle -->
@@ -48,11 +48,11 @@
           <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1.5rem;">On this page</h3>
           <ul class="legal-toc" id="privacy-toc-links">
             <li><a href="#introduction" class="toc-link active" id="toc-intro">1. Introduction</a></li>
-            <li><a href="#information-we-collect" class="toc-link" id="toc-collect">2. Information We Collect</a></li>
-            <li><a href="#how-we-use-information" class="toc-link" id="toc-use">3. How We Use Information</a></li>
-            <li><a href="#data-security" class="toc-link" id="toc-security">4. Data Security</a></li>
-            <li><a href="#your-rights" class="toc-link" id="toc-rights">5. Your Legal Rights</a></li>
-            <li><a href="#contact" class="toc-link" id="toc-contact">6. Contact Us</a></li>
+            <li><a href="#data-collection" class="toc-link" id="toc-collect">2. Zero Data Collection</a></li>
+            <li><a href="#local-storage" class="toc-link" id="toc-storage">3. Local Device Storage</a></li>
+            <li><a href="#third-parties" class="toc-link" id="toc-third-party">4. Third-Party Services</a></li>
+            <li><a href="#retention" class="toc-link" id="toc-retention">5. Data Retention</a></li>
+            <li><a href="#contact" class="toc-link" id="toc-contact">6. Support Desk</a></li>
           </ul>
         </aside>
         
@@ -61,82 +61,82 @@
           <h1 class="gradient-text">Privacy Policy</h1>
           <div class="legal-meta">
             <span>Last Updated: May 25, 2026</span>
-            <span>Version: 1.0.0</span>
+            <span>Version: 1.0.0 (MVP)</span>
           </div>
 
           <!-- Section 1 -->
           <section class="legal-section" id="introduction">
             <h2>1. Introduction</h2>
             <p>
-              Welcome to <strong>buckspense.online</strong> (referred to as "we", "us", "our", or "Buckspense"). We are deeply committed to protecting your personal information and your right to financial privacy. 
+              Welcome to the Privacy Policy for the <strong>Buckspense</strong> Android mobile application (referred to as "the App" or "Buckspense") and our supporting landing website <strong>https://buckspense.online/</strong>. 
             </p>
             <p>
-              This Privacy Policy details how we collect, process, utilize, and protect your information when you access our dashboard, tools, and website application. Please read this document carefully to fully understand our data practices. If you disagree with any terms inside this policy, please discontinue access to our services immediately.
+              We believe that your personal and financial datasets belong to you alone. The App has been engineered from the ground up as a **100% offline-first utility**. It runs locally on your Android device with no cloud components. This document outlines how your data is handled on your physical device and when you contact our support desk.
             </p>
           </section>
 
           <!-- Section 2 -->
-          <section class="legal-section" id="information-we-collect">
-            <h2>2. Information We Collect</h2>
+          <section class="legal-section" id="data-collection">
+            <h2>2. Zero Data Collection</h2>
             <p>
-              We collect information that you voluntarily provide to us when registering for the early developer beta, subscribing to updates, or configuring dashboard settings:
+              Because Buckspense is a fully offline application:
             </p>
             <ul class="legal-list">
-              <li><strong>Personal Data:</strong> We collect contact identifiers such as your name, email address, and billing credentials when you opt-in or sign up.</li>
-              <li><strong>Financial Metadata:</strong> If you manually upload or connect spreadsheets, transaction lists, budgets, or cash flows, we collect that transaction metadata purely to structure your interactive dashboard charts.</li>
-              <li><strong>Device &amp; Telemetry Data:</strong> We automatically collect certain system indicators such as IP addresses, browser specifications, operating system versions, and page usage logs to ensure premium stability and responsiveness.</li>
+              <li><strong>No Server Uploads:</strong> We do **not** run backend servers, user accounts, or synchronization databases. None of your logs, balances, budget allocations, or categories are ever transmitted outside your device.</li>
+              <li><strong>No Financial Permissions:</strong> The App does not require access to your mobile banking profiles, credit cards, or text message inbox (SMS) to read transaction alerts. All transactions are logged manually by you.</li>
+              <li><strong>No Contact Tracing/Location Logs:</strong> The App does not track your physical location, device camera, contacts list, or phone serial indicators.</li>
             </ul>
           </section>
 
           <!-- Section 3 -->
-          <section class="legal-section" id="how-we-use-information">
-            <h2>3. How We Use Information</h2>
+          <section class="legal-section" id="local-storage">
+            <h2>3. Local Device Storage</h2>
             <p>
-              We process your information based on legitimate commercial interests, fulfillment of contract templates, and compliance with statutory obligations:
+              Any expense item, tag, category, or budget limit you register inside the Buckspense App is stored directly on your physical Android device.
             </p>
-            <ul class="legal-list">
-              <li>To deliver, configure, and maintain your personal dashboard analytics.</li>
-              <li>To send you updates regarding beta milestones, tech releases, or administrative notifications.</li>
-              <li>To ensure the integrity of our systems by monitoring against fraudulent activity or network exploits.</li>
-              <li>To enforce our terms of service and legal regulations.</li>
-            </ul>
             <p>
-              We **never** sell, rent, or trade your personal financial transaction history or email records to any third-party marketing companies.
+              The App structures these entries within a highly secure local database (implemented via Android's **Room / SQLite** architecture). This database is placed within the App's **sandboxed private storage** directory. The Android operating system isolates this sandbox, ensuring other programs installed on your phone cannot access or read your financial data files.
             </p>
           </section>
 
           <!-- Section 4 -->
-          <section class="legal-section" id="data-security">
-            <h2>4. Data Security</h2>
+          <section class="legal-section" id="third-parties">
+            <h2>4. Third-Party Services</h2>
             <p>
-              Security is the absolute core of our product architecture. We have implemented robust technical and organizational security controls designed to safeguard any financial data we process:
+              We do not integrate third-party data broker SDKs, analytics tracking engines, or advertising libraries inside our codebase. 
             </p>
             <p>
-              All connections to our dashboard use SSL/TLS encryption transit methods. At rest, sensitive database records are secured with banking-grade <strong>AES-256 standard encryption keys</strong>. However, please remember that no electronic transmission over the internet can be guaranteed 100% secure, so please ensure you use secure passwords and do not share your private credentials.
+              The App may be downloaded through the **Google Play Store**. Google may collect standard application installation metrics, crash diagnostics, and operating system statistics under their own terms of service. We do not have access to or control over Google's telemetry systems.
             </p>
           </section>
 
           <!-- Section 5 -->
-          <section class="legal-section" id="your-rights">
-            <h2>5. Your Legal Rights</h2>
+          <section class="legal-section" id="retention">
+            <h2>5. Data Retention &amp; Deletion</h2>
             <p>
-              Depending on your local jurisdiction (such as rights granted under the GDPR or CCPA), you hold specific rights regarding your personal and financial datasets:
+              Since all details reside locally on your device:
             </p>
             <ul class="legal-list">
-              <li><strong>Right to Access:</strong> You can request complete export files of all data registered under your profile.</li>
-              <li><strong>Right to Rectification:</strong> You can edit or correct any information through your settings drawer.</li>
-              <li><strong>Right to Erasure (Deletion):</strong> You can completely purge all records from our servers at any time, instantly.</li>
+              <li>You can delete individual ledger transactions or clear the entire dataset through the App settings drawer at any time.</li>
+              <li><strong>App Uninstallation:</strong> Uninstalling the Buckspense App from your Android device instantly and permanently deletes your local sandboxed SQLite database file, along with all recorded transaction histories. Because we maintain zero cloud backups, deleted data **cannot** be recovered by us.</li>
             </ul>
           </section>
 
           <!-- Section 6 -->
           <section class="legal-section" id="contact">
-            <h2>6. Contact Us</h2>
+            <h2>6. Support Desk &amp; Enquiries</h2>
             <p>
-              If you have any feedback, questions, or concerns regarding this Privacy Policy or our security infrastructure, please contact our privacy compliance desk:
+              When you submit an enquiry through the feedback form on our website or email us directly:
             </p>
-            <p style="font-weight: 500; color: var(--accent-cyan);">
-              Email: <a href="mailto:privacy@buckspense.online">privacy@buckspense.online</a>
+            <ul class="legal-list">
+              <li>We collect your email address, name, and the text of your message to respond to your support request.</li>
+              <li>This communication data is used solely to answer your questions and is never shared, leased, or sold to third-party advertising companies.</li>
+            </ul>
+            <p>
+              For any questions regarding our offline security guidelines or to submit suggestions, reach out to our team at:
+            </p>
+            <p style="font-weight: 600; color: var(--accent-cyan);">
+              Email: <a href="mailto:buckspense@gmail.com">buckspense@gmail.com</a>
             </p>
           </section>
 
@@ -155,16 +155,16 @@
             <span>buck<span class="gradient-accent-text">spense</span></span>
           </a>
           <p class="footer-desc">
-            Premium personal finance and budgeting tailored to the modern professional. Streamlined, encrypted, and designed for growth.
+            A simple, offline-first personal financial manager for Android devices. Lightweight, private, and designed for local wealth logging.
           </p>
         </div>
         
         <!-- Link Directory -->
         <div>
-          <h4 class="footer-heading">Product</h4>
+          <h4 class="footer-heading">App Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html#features" class="footer-link">Features</a></li>
-            <li><a href="index.html#cta" class="footer-link">Beta Program</a></li>
+            <li><a href="index.html#features" class="footer-link">App Features</a></li>
+            <li><a href="index.html#contact-us" class="footer-link">Submit Feedback</a></li>
           </ul>
         </div>
         
@@ -176,9 +176,9 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Contact</h4>
+          <h4 class="footer-heading">Contact Support</h4>
           <ul class="footer-links">
-            <li><a href="mailto:support@buckspense.online" class="footer-link">support@buckspense.online</a></li>
+            <li><a href="mailto:buckspense@gmail.com" class="footer-link" style="color: var(--accent-cyan); font-weight: 500;">buckspense@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -186,7 +186,7 @@
       <!-- Footer Copyright Bar -->
       <div class="footer-bottom">
         <p>&copy; <span id="current-year">2026</span> buckspense.online. All rights reserved.</p>
-        <p style="color: var(--text-muted);">Secure SSL Encrypted Platform</p>
+        <p style="color: var(--text-muted);">Privacy-Secured Android Environment</p>
       </div>
     </div>
   </footer>
